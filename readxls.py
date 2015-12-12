@@ -1,14 +1,16 @@
-#!/usr/bin/env/python27
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import xlrd
 
 
-wb = xlrd.open_workbook('D:/python/excel/test.xls')
+path = '/home/thomas/Documents/xls2pgsql/fepstest.xls'
+
+wb = xlrd.open_workbook(path)
 
 ws = wb.sheet_by_name('Feuil1')
 
-
-nb_rows = ws.nrows  # 2
+nb_rows = ws.nrows
 
 i = 0
 
