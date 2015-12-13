@@ -4,20 +4,29 @@
 import xlrd
 
 
-path = '/home/thomas/Documents/xls2pgsql/fepstest.xls'
+xls_file = '/home/thomas/Documents/xls2pgsql/fepstest.xls'
 
-wb = xlrd.open_workbook(path)
+wb = xlrd.open_workbook(xls_file)
 
 ws = wb.sheet_by_name('Feuil1')
 
-nb_rows = ws.nrows
+nb_rows = ws.nrows #3
+nb_cols = ws.ncols #4
 
-i = 0
+l = 1
+c = 0
 
-while i < nb_rows:
-	row = ws.row(i)
-	i += 1
-	print row
+while l < nb_rows:
+	while c < nb_cols:
+		if c == 0:
+			date = xlrd.xldate_as_tuple(int(ws.row(l)[c]), 1)
+			print date
+		else:
+			print ws.row(l)[c]
+		c += 1
+	c = 0
+	l += 1
+
 
 
 
