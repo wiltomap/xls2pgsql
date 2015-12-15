@@ -4,9 +4,10 @@
 import xlrd
 
 
-xls_file = '/home/thomas/Documents/xls2pgsql/fepstest.xls'
+xls_file1 = '/home/thomas/Documents/xls2pgsql/fepstest.xls'
+xls_file2 = 'D:\\python\\xls2pgsql\\fepstest.xls'
 
-wb = xlrd.open_workbook(xls_file)
+wb = xlrd.open_workbook(xls_file2)
 
 ws = wb.sheet_by_name('Feuil1')
 
