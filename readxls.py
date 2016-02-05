@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import xlrd
@@ -44,4 +44,3 @@ while l < nb_rows:
 		c += 1
 	c = 0
 	l += 1
-	
